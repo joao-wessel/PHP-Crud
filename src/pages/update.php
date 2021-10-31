@@ -44,7 +44,7 @@ $result = $dao->search($_GET['id']);
 <body>
   <div class="header-container">
     <header class="title">
-      Cadastro
+      Update
     </header>
   </div>
 
@@ -103,14 +103,14 @@ $result = $dao->search($_GET['id']);
       <div class="col-10">
         <label for="input-sexo" class="form-label">Sexo</label>
         <div class="form-radio">
-          <input class="form-radio-input" name="sexo" value="<?= $result['sexo'] ?>" type="radio" id="input-masculino" required>
+          <input class="form-radio-input" name="sexo" value="Masculino" type="radio" id="input-masculino" <?php echo ($result['sexo'] == 'Masculino') ? 'checked="checked"' : ''; ?> required>
           <label class="form-radio-label" for="input-masculino">
             Masculino
           </label>
         </div>
 
         <div class="form-radio">
-          <input class="form-radio-input" name="sexo" value="<?= $result['sexo'] ?>" type="radio" id="input-feminino" required>
+          <input class="form-radio-input" name="sexo" value="Feminino" type="radio" id="input-feminino" <?php echo ($result['sexo'] == 'Feminino') ? 'checked="checked"' : ''; ?> required>
           <label class="form-radio-label" for="input-feminino">
             Feminino
           </label>
